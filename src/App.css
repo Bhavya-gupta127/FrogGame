@@ -1,0 +1,56 @@
+.container{
+  overflow: hidden;
+}
+
+.bgImg{
+  height: 100vh;
+  width: 100vw;
+  opacity: 0.7;
+  z-index: -1;
+  position: absolute;
+}
+.points{
+  font-size: 3rem;
+}
+.points p{
+  margin: auto;
+  text-align: center;
+}
+.board{
+  justify-items: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  margin: 5%;
+}
+.row{
+  display: flex;
+  flex-direction: row;
+}
+.mole{
+  border: 3px solid black;
+  font-size: 8vw;
+  margin: auto;
+  text-align: center;
+  cursor: pointer;
+}
+@media screen and (min-width:480px) {
+  .mole{
+    font-size: 5vw;
+  }
+  
+}
+.play{
+  margin: auto;
+  font-size: 2rem;
+  border-radius: 80%;
+  padding: 20px;
+}
+.detials{
+  text-align: center;
+}
+.play{
+  border: 1px solid rgb(0, 0, 0);
+  background-color:#3c6d48e6;
+  color: white;
+}
