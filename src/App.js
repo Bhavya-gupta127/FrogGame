@@ -1,3 +1,4 @@
+import { isDisabled } from '@testing-library/user-event/dist/utils';
 import './App.css';
 import Bg from './bg.jpg'
 import {useEffect,react, useState} from 'react';
@@ -8,6 +9,11 @@ function App() {
 
   function startGame()
   {
+    document.getElementById('playbtn').disabled=true;
+    document.getElementById('playbtn').innerText='Tap The Frogs';
+    document.getElementById('playbtn').style.borderRadius='10px';
+    document.getElementById('playbtn').style.backgroundColor='gray';
+    
     setpoints(0);
     let i=0;
     let s1=setInterval(() => {
@@ -15,6 +21,10 @@ function App() {
       if(i==25)
       { 
         clearInterval(s1);
+        document.getElementById('playbtn').disabled=false;
+        document.getElementById('playbtn').innerText='Play';
+
+
       }
       i++;
 
@@ -100,7 +110,7 @@ function App() {
           MaxScore: <strong>{maxScore}</strong>
         </p>
     
-          <button className="play" onClick={startGame}>
+          <button className="play" id='playbtn' onClick={startGame} >
           Play
         </button>
     </div>
